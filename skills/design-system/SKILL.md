@@ -1,56 +1,56 @@
 ---
 name: design-system
-description: CSS 变量体系、组件 token、主题切换，输出可执行的设计系统代码
+description: 从网站提取设计基元生成 token 文件，Tailwind v4 设计系统构建
 source:
-  type: original
+  type: derived
   repo: skills-repo/design-studio
   path: skills/design-system/SKILL.md
   version: 1.0.0
   updated: 2026-07-26
+  url: https://skills.sh/arvindrk/extract-design-system/extract-design-system
 metadata:
   category: 设计系统
   platform: Web
-  difficulty: 进阶
+  difficulty: 入门
 ---
 
-# 设计系统构建器
+# 设计系统提取与构建
 
-> 从零搭建可用的设计系统：颜色、间距、排版、圆角、阴影、组件 token、主题切换。
+> 从公开网站反向提取设计基元，生成项目可用的 token 文件和 Tailwind v4 设计系统。
 
 ## 能力
 
-- **Token 体系**：颜色/间距/排版/圆角/阴影的设计 token 定义
-- **CSS 变量方案**：生成 `:root` 变量体系，支持 Tailwind 集成
-- **主题切换**：明暗主题、品牌主题、用户自定义主题
-- **组件级 token**：按钮、输入框、卡片等组件的专属 token
-- **一致性检查**：扫描项目，标记偏离设计系统的样式
+- **设计提取**：从网站自动提取颜色、字体、间距、圆角、阴影等设计基元
+- **Token 生成**：输出 `tokens.json`、`tokens.css` 供项目直接使用
+- **Tailwind v4 设计系统**：CSS-first 配置、语义化 token、暗色模式、响应式变体
+- **主题切换**：CSS 自定义属性驱动，支持明暗主题无缝切换
 
 ## 使用方式
 
-在 Claude Code 中使用 `/design-system` 调用。
-
 ```
-/design-system 为这个 SaaS 项目创建一套设计系统
-/design-system 检查哪些组件样式不一致
+/design-system 从 https://example.com 提取设计系统
+/design-system 为我的项目创建一套 Tailwind v4 设计 token
+/design-system 给这个设计系统添加暗色模式
 ```
 
 ## 工作流
 
-1. 分析项目当前的样式分布（颜色、间距、字体大小）
-2. 提取和规范化设计 token
-3. 生成 CSS 变量文件（`:root` 明暗主题）
-4. 为 5-8 个核心组件定义组件级 token
-5. 输出 Tailwind 配置文件（如需要）
+1. 确认目标网站 URL 可公开访问
+2. 运行 `npx extract-design-system <url>` 提取设计基元
+3. 审查 `.extract-design-system/normalized.json` 中的颜色、字体、间距
+4. 基于提取结果或用户需求，生成 Tailwind v4 `@theme` 配置
+5. 输出 `tokens.json`、`tokens.css` 到项目目录
 
 ## 适用场景
 
-- 新项目需要统一的设计基础
-- 旧项目样式碎片化需要整理
-- 多个项目间需要共享设计系统
-- 为组件库准备 token 层
+- 从竞品网站提取设计参考
+- 新项目快速搭建设计系统
+- 已有项目从 Tailwind v3 迁移到 v4
+- 统一团队的设计 token 规范
 
 ## 限制
 
-- 不生成 Figma 设计文件
-- 不涉及品牌策略和视觉定位
-- 不输出完整组件库代码（仅 token 层）
+- 提取结果适合初始化，不是像素级复刻
+- 动态网站可能提取不完整
+- 不覆盖完整组件库（仅 token 层面）
+- 不要用提取结果覆盖已有设计系统

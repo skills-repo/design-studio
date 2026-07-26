@@ -1,63 +1,60 @@
 ---
 name: motion-design
-description: CSS/JS 动画与微交互设计，生成流畅过渡效果和交互动效代码
+description: Framer Motion 动画与微交互：页面过渡、手势、滚动动画、编排序列
 source:
-  type: original
+  type: derived
   repo: skills-repo/design-studio
   path: skills/motion-design/SKILL.md
   version: 1.0.0
   updated: 2026-07-26
+  url: https://skills.sh/patricio0312rev/skills/framer-motion-animator
 metadata:
   category: 动效
   platform: Web
   difficulty: 进阶
 ---
 
-# 动效设计
+# Framer Motion 动画与微交互
 
-> 为 Web 界面设计流畅的过渡动画和微交互，输出可直接使用的 CSS/JS 代码。
+> 使用 Framer Motion 声明式 API 构建流畅动画和微交互，覆盖页面过渡、手势、滚动驱动动画。
 
 ## 能力
 
-- **过渡动画**：hover、focus、展开/收起等状态过渡
-- **入场动画**：页面加载、滚动进入、列表项依次出现
-- **微交互**：按钮反馈、表单验证、加载状态动效
-- **性能优化**：使用 `transform`/`opacity` 确保 60fps
-- **偏好尊重**：检测 `prefers-reduced-motion`，提供降级方案
+- **入场/出场动画**：opacity、scale、position、rotation 的 animate 和 exit
+- **手势交互**：whileHover、whileTap、whileDrag、whileFocus
+- **页面过渡**：AnimatePresence 实现路由切换动画
+- **滚动驱动**：useScroll + useTransform 实现视差和滚动触发
+- **编排序列**：staggerChildren、delayChildren、when 控制动画时序
+- **性能优化**：GPU 加速属性优先（transform、opacity）
 
 ## 使用方式
 
-在 Claude Code 中使用 `/motion-design` 调用。
-
 ```
-/motion-design 为这个按钮添加点击反馈动画
-/motion-design 给这个页面设计滚动入场效果
+/motion-design 给这个 Modal 添加淡入淡出动画
+/motion-design 设计一个列表项的 stagger 入场效果
+/motion-design 这个按钮的 hover 动效不够流畅，帮我优化
 ```
 
 ## 工作流
 
-1. 描述需要动效的交互场景
-2. AI 设计动效方案（时长、缓动、触发条件）
-3. 输出 CSS animation/transition 或 JS 代码
-4. 确保包含 `prefers-reduced-motion` 降级
-5. 给出性能注意事项
-
-## 设计原则
-
-- **200-300ms**：微交互最佳时长
-- **ease-out**：入场用 ease-out，离场用 ease-in
-- **一屏不超过 3 个动效焦点**：避免视觉噪音
-- **动效要有目的**：引导注意、反馈操作、过渡状态
+1. 识别动画需求：入场/退场/hover/手势/滚动
+2. 选择动画类型：简单动画 / variants / 手势 / layout
+3. 定义 motion 属性：opacity、scale、y、rotate
+4. 配置 transition：duration、ease、spring 物理参数
+5. 编排序列：父容器 staggerChildren + delayChildren
+6. 性能检查：优先使用 transform 和 opacity（GPU 加速）
 
 ## 适用场景
 
-- 产品页面缺乏交互反馈
-- 页面切换生硬需要过渡
-- 关键操作需要视觉确认（如添加到购物车）
-- 数据可视化需要动画引导
+- 页面路由切换动画
+- 列表项交错入场
+- Modal/Drawer/Toast 进出动画
+- 拖拽和手势交互
+- 滚动视差效果
 
 ## 限制
 
-- 不输出复杂 3D/WebGL 动画
-- 不替代 After Effects/Lottie 工作流
-- 品牌动画（Logo 动效）需要专业动效设计师
+- 仅支持 React 生态（需 `framer-motion` 包）
+- 复杂物理动画建议使用 react-spring 或 GSAP
+- 不涉及 Canvas/WebGL 动画
+- 不涉及 iOS/Android 原生动效（SwiftUI matchedGeometry / Compose animateAsState）

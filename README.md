@@ -18,10 +18,10 @@
 
 | 环节 | 技能 | 描述 | 来源 |
 |------|------|------|------|
-| 🏗️ 设计系统 | `design-system` | CSS 变量体系、组件 token、主题切换 | 原创 |
-| 👁️ 界面审查 | `ui-review` | UI 一致性和可用性审查，发现布局/交互问题 | 原创 |
-| ♿ 可访问性 | `accessibility` | WCAG 审查、颜色对比度、键盘导航、屏幕阅读器 | 原创 |
-| 🎬 动效 | `motion-design` | CSS/JS 动画建议，过渡效果与微交互 | 原创 |
+| 🏗️ 设计系统 | `design-system` | 从网站提取设计基元生成 token，Tailwind v4 设计系统 | [衍生](https://skills.sh/arvindrk/extract-design-system/extract-design-system) |
+| 👁️ 界面审查 | `ui-review` | UI 一致性和视觉回归审查，设计稿到代码对比 | [衍生](https://skills.sh/minimax-ai/skills/vision-analysis) |
+| ♿ 可访问性 | `accessibility` | WCAG 2.2 无障碍审计，覆盖 Web/iOS/Android 跨平台 | [衍生](https://skills.sh/affaan-m/everything-claude-code/accessibility) |
+| 🎬 动效 | `motion-design` | Framer Motion 动画与微交互：页面过渡、手势、滚动 | [衍生](https://skills.sh/patricio0312rev/skills/framer-motion-animator) |
 
 ## 快速开始
 

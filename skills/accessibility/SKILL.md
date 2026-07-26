@@ -1,67 +1,56 @@
 ---
 name: accessibility
-description: WCAG 可访问性审查，检查颜色对比度、键盘导航、屏幕阅读器
+description: WCAG 2.2 无障碍审计与实现，覆盖 Web/iOS/Android 跨平台语义化
 source:
-  type: original
+  type: derived
   repo: skills-repo/design-studio
   path: skills/accessibility/SKILL.md
   version: 1.0.0
   updated: 2026-07-26
+  url: https://skills.sh/affaan-m/everything-claude-code/accessibility
 metadata:
-  category: 可访问性
-  platform: Web
+  category: 无障碍
+  platform: 通用
   difficulty: 进阶
 ---
 
-# 无障碍审查
+# 无障碍审计（WCAG 2.2）
 
-> 基于 WCAG 2.1 AA 标准，审查和修复 Web 应用的可访问性问题。
+> 确保数字产品对所有用户可感知、可操作、可理解、健壮（POUR），覆盖 Web、iOS 和 Android 平台。
 
 ## 能力
 
-- **颜色对比度**：文本/图标与背景的对比度检查（≥4.5:1 正常文本，≥3:1 大文本）
-- **键盘导航**：Tab 顺序、焦点可见性、跳过链接
-- **语义 HTML**：heading 层级、landmark 区域、ARIA 标签
-- **屏幕阅读器**：alt 文本、表单标签、动态内容通知
-- **触控目标**：最小 44×44px 触控区域检查
+- **WCAG 2.2 审计**：对照最新标准检查颜色对比度、焦点可见性、目标尺寸（24px 最小）
+- **语义化实现**：Web（ARIA + HTML5）、iOS（Accessibility Traits）、Android（Semantics）
+- **焦点管理**：键盘导航顺序、可见焦点指示器（SC 2.4.11）
+- **标签与提示**：`aria-label`、`accessibilityLabel`、`contentDescription` 跨平台对照
+- **动态内容**：`aria-live` 区域，状态变更通知
 
 ## 使用方式
 
-在 Claude Code 中使用 `/accessibility` 调用。
-
 ```
-/accessibility 审查这个页面的无障碍问题
-/accessibility 检查整个应用的键盘导航是否可用
+/accessibility 审计这个页面的 WCAG 2.2 合规性
+/accessibility 为这个组件添加 ARIA 属性和键盘导航
+/accessibility 检查这个 iOS 页面的辅助功能标注
 ```
 
 ## 工作流
 
-1. 提供页面代码或 URL
-2. AI 逐项检查 WCAG 2.1 AA 标准
-3. 按严重度排序：阻断 → 严重 → 一般 → 建议
-4. 对每个问题给出代码修复方案
-5. 输出 WCAG 合规清单
-
-## 输出格式
-
-```markdown
-## 无障碍审查报告
-
-| # | WCAG 标准 | 问题 | 严重度 | 影响用户 | 修复 |
-|---|----------|------|--------|---------|------|
-| 1 | 1.4.3 对比度 | 灰色文本 #999 对比度 2.8:1 | 严重 | 低视力 | 改为 #767676 |
-| 2 | 2.1.1 键盘 | 下拉菜单无法用键盘操作 | 阻断 | 键盘用户 | 添加 arrow key 处理 |
-```
+1. 确定组件角色：优先使用原生语义元素
+2. 检查可感知性：对比度 4.5:1（正文）/ 3:1（大文本/UI）、图片替代文本
+3. 验证可操作性：24px 最小触控目标、键盘可达、焦点指示器可见
+4. 确认可理解性：一致导航、描述性错误信息、避免重复输入
+5. 测试健壮性：Name/Role/Value 模式、跨平台语义映射
 
 ## 适用场景
 
-- 上线前的无障碍合规检查
-- 政府/教育/医疗等有合规要求的项目
-- 国际化项目（多语言无障碍）
-- 移动端 Web 无障碍审查
+- WCAG 2.2 合规审计
+- 组件无障碍标注（ARIA/SwiftUI/Compose）
+- 屏幕阅读器适配验证
+- 键盘导航和焦点管理优化
 
 ## 限制
 
-- 不替代真实屏幕阅读器测试
-- 不覆盖原生移动 App 无障碍
-- 动态内容（SPA 路由切换）需配合人工验证
+- 不替代专业无障碍审计工具（如 axe-core、Lighthouse）
+- 不覆盖法律合规建议
+- 不涉及手语或字幕等辅助内容制作
