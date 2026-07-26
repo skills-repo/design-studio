@@ -1,6 +1,12 @@
 ---
 name: motion-design
 description: CSS/JS 动画与微交互设计，生成流畅的过渡效果和交互动效代码
+source:
+  type: original
+  repo: skills-repo/design-studio
+  path: skills/motion-design/SKILL.md
+  version: 1.0.0
+  updated: 2026-07-26
 metadata:
   category: 动效
   platform: Web

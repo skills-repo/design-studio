@@ -1,6 +1,12 @@
 ---
 name: design-system
 description: 构建 CSS 变量体系、组件 token、主题切换，输出可执行的设计系统代码
+source:
+  type: original
+  repo: skills-repo/design-studio
+  path: skills/design-system/SKILL.md
+  version: 1.0.0
+  updated: 2026-07-26
 metadata:
   category: 设计系统
   platform: Web

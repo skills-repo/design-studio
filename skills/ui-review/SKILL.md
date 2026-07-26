@@ -1,6 +1,12 @@
 ---
 name: ui-review
 description: UI 一致性和可用性审查，发现布局错位、交互不一致、视觉层次问题
+source:
+  type: original
+  repo: skills-repo/design-studio
+  path: skills/ui-review/SKILL.md
+  version: 1.0.0
+  updated: 2026-07-26
 metadata:
   category: 界面审查
   platform: Web
