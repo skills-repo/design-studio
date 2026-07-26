@@ -1,6 +1,6 @@
 ---
 name: motion-design
-description: CSS/JS 动画与微交互设计，生成流畅的过渡效果和交互动效代码
+description: CSS/JS 动画与微交互设计，生成流畅过渡效果和交互动效代码
 source:
   type: original
   repo: skills-repo/design-studio

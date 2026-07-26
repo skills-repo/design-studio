@@ -1,6 +1,6 @@
 ---
 name: design-system
-description: 构建 CSS 变量体系、组件 token、主题切换，输出可执行的设计系统代码
+description: CSS 变量体系、组件 token、主题切换，输出可执行的设计系统代码
 source:
   type: original
   repo: skills-repo/design-studio

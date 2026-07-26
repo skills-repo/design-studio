@@ -1,6 +1,6 @@
 ---
 name: accessibility
-description: WCAG 可访问性审查，检查颜色对比度、键盘导航、屏幕阅读器支持
+description: WCAG 可访问性审查，检查颜色对比度、键盘导航、屏幕阅读器
 source:
   type: original
   repo: skills-repo/design-studio

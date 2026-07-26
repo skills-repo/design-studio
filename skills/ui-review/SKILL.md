@@ -1,6 +1,6 @@
 ---
 name: ui-review
-description: UI 一致性和可用性审查，发现布局错位、交互不一致、视觉层次问题
+description: UI 一致性和可用性审查，发现布局错位、交互不一致、视觉层次
 source:
   type: original
   repo: skills-repo/design-studio
