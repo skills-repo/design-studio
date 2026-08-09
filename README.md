@@ -43,3 +43,23 @@ system      review                                  design
 ## 许可
 
 MIT
+
+## 安装 / Install
+
+整库安装（含全部 4 个子技能）与单技能安装命令如下，按需在终端执行：
+
+```
+npx skills add skills-repo/design-studio
+npx skills add skills-repo/design-studio@design-system
+```
+
+> 把 `@design-system` 换成任意子技能目录名即可单独安装：`design-system`、`ui-review`、`accessibility`、`motion-design`。
+
+## 子技能索引
+
+| 子技能 | 说明 |
+|--------|------|
+| design-system | 从网站提取设计基元，生成 token 与 Tailwind v4 设计系统 |
+| ui-review | UI 一致性与视觉回归审查，设计稿到代码对比 |
+| accessibility | WCAG 2.2 无障碍审计与跨平台语义化实现 |
+| motion-design | Framer Motion 动画与微交互：页面过渡、手势、滚动 |
