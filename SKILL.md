@@ -12,7 +12,7 @@ metadata:
   difficulty: 进阶
   platform: skills-repo
   created: 2026-07-26
-  updated: 2026-08-09
+  updated: 2026-08-15
   architecture: superpower
 tags:
   - UI/UX
@@ -35,8 +35,10 @@ tags:
 
 ## 能力索引（超级技能路由）
 
-| 任务 | 调用 | 关键词（grep 线索） |
-|------|------|---------------------|
+| 任务 | 读取 / 调用 | 关键词（grep 线索） |
+|------|------------|---------------------|
+| 设计系统基础方法论 | `references/design-system-foundations.md` | token, Tailwind v4, 主题切换, 暗色模式, 提取, 间距节奏 |
+| UI 视觉审查方法论 | `references/ui-review-checklist.md` | 对比度, 审查清单, 视觉回归, 截图, Playwright, 严重级 |
 | 设计系统提取与构建 | `skills/design-system/SKILL.md` | design-system, 设计系统, token, Tailwind v4, 主题切换 |
 | UI 视觉一致性审查 | `skills/ui-review/SKILL.md` | ui-review, 视觉审查, 对比设计稿, 颜色偏差, 布局错位 |
 | WCAG 2.2 无障碍审计与实现 | `skills/accessibility/SKILL.md` | accessibility, WCAG, 对比度, ARIA, 键盘导航 |
