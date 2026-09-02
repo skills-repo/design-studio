@@ -49,6 +49,10 @@ metadata:
 - 组件库所有状态完整性验证
 - 多浏览器/多设备 UI 一致性检查
 
+## 相关参考（Playbook）
+
+更完整的视觉回归审查清单、严重级判定标准与对比度命令，见 [`references/ui-review-checklist.md`](../../references/ui-review-checklist.md)。
+
 ## 限制
 
 - 不替代专业视觉回归测试工具（如 Percy、Chromatic）

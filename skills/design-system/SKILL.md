@@ -48,6 +48,10 @@ metadata:
 - 已有项目从 Tailwind v3 迁移到 v4
 - 统一团队的设计 token 规范
 
+## 相关参考（Playbook）
+
+更完整的设计基元提取决策树、Tailwind v4 `@theme` 配置范式与暗色模式坑表，见 [`references/design-system-foundations.md`](../../references/design-system-foundations.md)。
+
 ## 限制
 
 - 提取结果适合初始化，不是像素级复刻
