@@ -49,6 +49,10 @@ metadata:
 - 屏幕阅读器适配验证
 - 键盘导航和焦点管理优化
 
+## 相关参考
+
+- 对比度与焦点验收：`references/ui-review-checklist.md`（§3.2 可运行对比度脚本、§5 清单含对比度 ≥4.5:1 与焦点可见 SC 2.4.11）
+
 ## 限制
 
 - 不替代专业无障碍审计工具（如 axe-core、Lighthouse）

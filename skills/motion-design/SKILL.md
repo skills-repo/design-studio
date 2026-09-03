@@ -52,6 +52,10 @@ metadata:
 - 拖拽和手势交互
 - 滚动视差效果
 
+## 相关参考
+
+- 动画的视觉/交互表现最终在 `references/ui-review-checklist.md` 的审查流程中验收（流畅度、reduced-motion 适配、焦点动效）
+
 ## 限制
 
 - 仅支持 React 生态（需 `framer-motion` 包）

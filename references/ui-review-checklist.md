@@ -2,6 +2,7 @@
 
 > 适用技能：`skills/ui-review`（UI 一致性与视觉回归审查，设计稿到代码对比）。
 > 本 playbook 提供审查的触发条件、分级标准、可运行的一致性检查代码，以及一份可直接勾选的审查清单。
+> 相关技能：`skills/accessibility`（对比度/焦点属其范畴）、`skills/motion-design`（动效流畅度与 reduced-motion 在交互审查中验收）。
 
 ## 1. 何时使用本 playbook（选择矩阵）
 
